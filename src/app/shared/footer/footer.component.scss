@@ -1,0 +1,35 @@
+/* footer.component.scss */
+
+.app-footer {
+    background-color: #ffffff;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #ccc;
+    margin-top: 160px;
+  
+    .social-icons-container {
+      display: flex;
+      gap: 15px;
+      margin-right: 10px;
+  
+      button {
+        background-color: #e0f7fa;
+        border-radius: 50%;
+        padding: 10px;
+        border: none; /* Elimina la línea de borde del botón */
+      }
+  
+      mat-icon {
+        font-size: 24px;
+        color: #007bb5;
+      }
+    }
+  
+    /* Centrar el logo en el footer */
+    .logo-container {
+      text-align: center;
+      flex: 1; /* Hace que el logo ocupe el espacio central */
+    }
+  }

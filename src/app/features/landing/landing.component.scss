@@ -1,0 +1,109 @@
+/* landing.component.scss */
+
+/* Variables */
+$blue-light: #00ADEF;      /* Azul claro */
+$custom-color: #51798E;    /* Tu color personalizado */
+$background-color: #B7DFF4;
+$white-color: #ffffff;
+
+/* Estilos del encabezado */
+.app-header {
+  background-color: $blue-light;
+
+  .logo {
+    display: flex;
+    align-items: center;
+
+    .logo-icon {
+      margin-left: 5px;
+    }
+  }
+}
+
+/* Contenedor principal */
+.content-container {
+  padding: 20px;
+  padding-left: 0; /* Opcional, si necesitas eliminar el padding del contenedor general */
+
+  .mat-grid-list {
+    padding: 0; /* Elimina padding del grid */
+
+    .mat-grid-tile {
+      padding-left: 0 !important; /* Elimina cualquier relleno innecesario */
+    }
+  }
+
+  .image-container {
+    margin-top: auto;
+
+
+    .landing-page-image-meds-container {
+      margin-top: 20px;
+      background-color: $background-color;
+      border-top-right-radius: 10%;
+      border-bottom-right-radius: 20%;
+
+      .landing-page-image-meds {
+        margin-top: auto;
+      }
+    }
+  }
+
+  .text-content {
+    justify-content: flex-start; /* Asegura que el contenido esté al principio */
+    padding-left: 0; /* Elimina el relleno si es necesario */
+    margin-left: 0; /* Elimina margen a la izquierda */
+
+    h1 {
+      font-weight: bold;
+      line-height: 1.2;
+      font-size: 56px;
+      color: $custom-color;
+    }
+
+    p {
+      font-size: 14px;
+      color: $custom-color;
+    }
+
+    .btn-personalizado {
+      border-radius: 5%;
+      margin-right: 5px;
+      margin-left: 5px;
+      background-color: $custom-color; /* Tu color personalizado */
+      color: $white-color; /* Color del texto */
+
+      &:hover {
+        background-color: #3b5c7a; /* Un tono más oscuro o diferente */
+      }
+    }
+  }
+}
+
+/* Botones de inicio de sesión y registro */
+.login-register-buttons {
+  float: right;
+  margin-top: 20px;
+  margin-right: 10px;
+  border-radius: 10px;
+
+  button {
+    margin: 0 5px;
+  }
+
+  .btn-personalizado {
+    background-color: $custom-color;
+    color: $white-color;
+
+    &:hover {
+      background-color: #3b5c7a;
+    }
+  }
+}
+
+/* Estilos del pie de página */
+.app-footer {
+  background-color: $blue-light;
+  color: $white-color;
+  padding: 10px;
+}
