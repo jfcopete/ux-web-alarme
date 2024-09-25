@@ -1,4 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
 @import 'm3-theme.scss';
+
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.cdk-overlay-container {
+    z-index: 1000 !important; /* Asegura que el datepicker esté siempre sobre otros elementos */
+  }
+.mat-datepicker-content {
+    box-shadow: 0 2px 4px -1px #0003, 0 4px 5px #00000024, 0 1px 10px #0000001f;
+    background-color: #fff;
+    color: #000000de
+  }
+  /* Selectores personalizados */
+.custom-select .mat-select-trigger {
+    background-color: #B7DFF4; // Fondo cuando está cerrado
+  }
+  
+  .custom-select .mat-select-panel {
+    background-color: #B7DFF4; // Fondo del dropdown
+  }
+  
+  .custom-select .mat-option {
+    background-color: #B7DFF4; // Fondo de las opciones
+  }
+  
+  .custom-select .mat-option:hover,
+  .custom-select .mat-option.mat-active {
+    background-color: #B7DFF4 !important; // Fondo más oscuro al hacer hover o seleccionar
+  }

@@ -1,0 +1,175 @@
+@use 'sass:map';
+@use '@angular/material' as mat;
+@use '../../../m3-theme' as *; // Ruta al archivo donde está tu paleta de colores
+
+/* Contenedor principal */
+.container {
+  display: flex;
+  height: 100vh; // Ocupa toda la altura del viewport
+  gap: 20px; // Espaciado entre la barra lateral y el contenido
+}
+
+/* Sidebar */
+app-nav-list {
+  flex: 0 0 250px; // Sidebar siempre ocupa 250px
+  background-color: map.get(map.get($palettes, primary), 50); // Color del nav
+  height: 100vh; // Asegura que la barra de navegación cubra toda la altura
+}
+
+/* Contenido principal */
+.content {
+  flex-grow: 1; // El contenido ocupa el espacio restante
+  padding: 20px;
+  overflow-y: auto; // Permite desplazamiento si el contenido es más grande que la pantalla
+  position: relative; // Asegura que los elementos emergentes tengan el comportamiento correcto
+}
+
+/* Encabezado */
+h2 {
+  font-size: 2rem;
+  color: map.get(map.get($palettes, primary), 40); // Color de los títulos
+}
+
+/* Estilos para las secciones de la forma */
+.form-sections {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px; // Espaciado entre las columnas
+}
+
+/* Columna izquierda */
+.left-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Columna derecha */
+.right-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Tarjeta de hora */
+.card-alarm {
+  padding: 20px;
+  background-color: map.get(map.get($palettes, primary), 50); // Fondo de las tarjetas
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-alarm h3 {
+  text-align: center;
+  color: map.get(map.get($palettes, primary), 40); // Color de los títulos
+}
+
+/* Estilos para el selector de hora */
+.time-selector {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.hour-selector, .minute-selector, .period-selector {
+  flex: 1;
+}
+
+/* Tarjeta de fecha */
+.card-date {
+  padding: 20px;
+  background-color: map.get(map.get($palettes, primary), 50); // Fondo de las tarjetas
+  border-radius: 8px;
+  position: relative; // Asegura que el datepicker tenga espacio suficiente
+}
+
+/* Estilos para la sección de medicamentos */
+.card-medications {
+  background-color: map.get(map.get($palettes, primary), 50); // Fondo de las tarjetas
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.card-medications h3 {
+  color: map.get(map.get($palettes, primary), 40); // Color de los títulos
+  margin-bottom: 20px;
+}
+
+.full-width {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.medication-toggle {
+  margin-top: 20px;
+}
+
+/* Botón para agregar alarma */
+.button-add-alarm {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.add-alarm-button {
+  background-color: map.get(map.get($palettes, primary), 50); // Fondo del botón
+  color: map.get(map.get($palettes, primary), 40); // Color del texto del botón
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+.add-alarm-button mat-icon {
+  margin-right: 8px;
+  color: map.get(map.get($palettes, primary), 40); // Color del ícono
+}
+
+/* Selectores personalizados */
+.custom-select .mat-select-trigger {
+  color: map.get(map.get($palettes, primary), 50); // Color del texto
+}
+
+.custom-select .mat-select-panel {
+  background-color: map.get(map.get($palettes, primary), 50); // Fondo del dropdown
+}
+
+.custom-select .mat-option {
+  background-color: map.get(map.get($palettes, primary), 50); // Fondo de las opciones
+  color: map.get(map.get($palettes, primary), 40); // Color del texto
+}
+
+.custom-select .mat-option:hover,
+.custom-select .mat-option.mat-active {
+  background-color: map.get(map.get($palettes, primary), 60) !important; // Fondo más oscuro al hacer hover o seleccionar
+}
+
+.date-title {
+  color: map.get(map.get($palettes, primary), 40); // Color del texto
+}
+
+/* Botón para agregar alarma */
+.button-add-alarm {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .add-alarm-button {
+    background-color: map.get(map.get($palettes, primary), 40); // Cambiado el fondo del botón
+    color: map.get(map.get($palettes, primary), 'contrast'); // Color de contraste para el texto del botón
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border-radius: 8px;
+  }
+  
+  .add-alarm-button {
+    margin-right: 8px;
+  }
+  
+
+
