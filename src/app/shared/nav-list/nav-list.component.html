@@ -1,0 +1,45 @@
+<div class="navbar-custom">
+  <mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #drawer class="sidenav" fixedInViewport
+        [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+        [mode]="(isHandset$ | async) ? 'over' : 'side'"
+        [opened]="(isHandset$ | async) === false">
+      <div class="large-icon-container">
+        <mat-icon class="large-icon">account_circle</mat-icon>
+      </div>
+      <div class="menu-de-administracion-container">
+        <span class="menu-de-administracion">Menu de administradion</span>
+      </div>
+      <div class="list-item-container">
+        <mat-nav-list>
+          <mat-list-item routerLink="/landing" routerLinkActive="active">
+            <mat-icon>alarm</mat-icon>
+            <span>Ver Alarmas</span>
+          </mat-list-item>
+          <mat-list-item routerLink="/crear-alarmas" routerLinkActive="active">
+            <mat-icon>add_alarm</mat-icon>
+            <span>Crear Alarmas</span>
+          </mat-list-item>
+          <mat-list-item routerLink="/estadisticas" routerLinkActive="active">
+            <mat-icon>analytics</mat-icon>
+            <span>Estadísticas</span>
+          </mat-list-item>
+          <mat-list-item routerLink="/historial" routerLinkActive="active">
+            <mat-icon>history</mat-icon>
+            <span>Historial</span>
+          </mat-list-item>
+          <mat-list-item routerLink="/medicamentos" routerLinkActive="active">
+            <mat-icon>medication</mat-icon>
+            <span>Medicamentos</span>
+          </mat-list-item>
+          <mat-list-item routerLink="/editar-perfil" routerLinkActive="active">
+            <mat-icon>person</mat-icon>
+            <span>Perfil</span>
+          </mat-list-item>
+        </mat-nav-list>
+      </div>
+    </mat-sidenav>
+    <mat-sidenav-content>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

@@ -1,1 +1,116 @@
-<p>edit-profile works!</p>
+<div class="container">
+    <!-- Sidebar -->
+    <app-nav-list></app-nav-list>
+  
+    <!-- Main content -->
+    <div class="content">
+      <h2>Editar Perfil</h2>
+
+      <!-- Layout de dos columnas -->
+      <div class="content-columns">
+        <!-- Columna Izquierda: Información Personal -->
+        <mat-card class="perfil-card">
+          <h3>Información Personal</h3>
+          <form [formGroup]="perfilForm" (ngSubmit)="guardarPerfil()">
+            
+            <!-- Envolvemos cada mat-form-field en un div -->
+            <div class="form-field">
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Nombre</mat-label>
+                <input matInput placeholder="Reescribe tu nombre para cambiar de nombre" formControlName="nombre" />
+                <mat-error *ngIf="perfilForm.get('nombre')?.hasError('required')">
+                  El nombre es obligatorio
+                </mat-error>
+                <mat-error *ngIf="perfilForm.get('nombre')?.hasError('minlength')">
+                  El nombre debe tener al menos 3 caracteres
+                </mat-error>
+              </mat-form-field>
+            </div>
+
+            <div class="form-field">
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Email</mat-label>
+                <input matInput placeholder="Correo electrónico" formControlName="email" />
+                <mat-error *ngIf="perfilForm.get('email')?.hasError('required')">
+                  El email es obligatorio
+                </mat-error>
+                <mat-error *ngIf="perfilForm.get('email')?.hasError('email')">
+                  Ingresa un email válido
+                </mat-error>
+              </mat-form-field>
+            </div>
+
+            <div class="form-field">
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Contraseña</mat-label>
+                <input matInput placeholder="Nueva contraseña" type="password" formControlName="contraseña" />
+                <mat-error *ngIf="perfilForm.get('contraseña')?.hasError('required')">
+                  La contraseña es obligatoria
+                </mat-error>
+                <mat-error *ngIf="perfilForm.get('contraseña')?.hasError('minlength')">
+                  La contraseña debe tener al menos 6 caracteres
+                </mat-error>
+              </mat-form-field>
+            </div>
+
+            <!-- Botones de Guardar y Desactivar -->
+            <div class="button-group">
+              <button mat-raised-button color="primary" type="submit" [disabled]="!perfilForm.valid">
+                Guardar
+              </button>
+              <button mat-button type="button" (click)="perfilForm.reset()">
+                Desactivar
+              </button>
+            </div>
+          </form>
+        </mat-card>
+
+        <!-- Columna Derecha: Notificaciones y Reabastecimiento -->
+        <div class="right-column">
+          <mat-card class="preferencias-card">
+            <h3>Notificaciones</h3>
+
+            <div class="notificaciones-section">
+              <h4>Notificaciones</h4>
+              <p>Aquí podrás encontrar tus notificaciones activas dentro de la app.</p>
+
+              <mat-checkbox *ngFor="let notificacion of notificaciones" [(ngModel)]="notificacion.seleccionado">
+                {{ notificacion.nombre }}
+              </mat-checkbox>
+
+              <div class="button-group">
+                <button mat-button type="button" (click)="desactivarNotificaciones()">
+                  Desactivar todas
+                </button>
+                <button mat-raised-button color="primary" type="button" (click)="guardarPreferencias()">
+                  Guardar
+                </button>
+              </div>
+            </div>
+          </mat-card>
+
+          <mat-card class="preferencias-card">
+            <h3>Notificaciones de reabastecimiento</h3>
+
+            <div class="notificaciones-section">
+              <h4>Reabastecimiento de medicamentos</h4>
+              <p>Configuración de notificaciones de reabastecimiento de medicamentos.</p>
+
+              <mat-checkbox *ngFor="let item of reabastecimiento" [(ngModel)]="item.seleccionado">
+                {{ item.nombre }}
+              </mat-checkbox>
+
+              <div class="button-group">
+                <button mat-button type="button" (click)="desactivarReabastecimiento()">
+                  Desactivar todas
+                </button>
+                <button mat-raised-button color="primary" type="button" (click)="guardarPreferencias()">
+                  Guardar
+                </button>
+              </div>
+            </div>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+</div>

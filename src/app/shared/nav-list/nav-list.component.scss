@@ -1,0 +1,79 @@
+@use 'sass:map';
+@use '@angular/material' as mat;
+@use '../../../m3-theme' as *; // Ruta relativa correcta
+
+.sidenav-container {
+  height: 100%;
+  background-color: map.get(map.get($palettes, primary), 50); // Fondo del contenedor completo
+}
+
+.sidenav {
+  background-color: map.get(map.get($palettes, primary), 50); // Fondo de la barra lateral
+  color: map.get(map.get($palettes, primary), 'contrast'); // Color de contraste para el texto
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.mat-toolbar {
+  background-color: map.get(map.get($palettes, primary), 60); // Color más oscuro para el toolbar
+  color: map.get(map.get($palettes, primary), 'contrast');
+}
+
+.mat-nav-list {
+  padding: 0;
+}
+
+.mat-list-item {
+  display: flex; // Alinea el ícono y el texto horizontalmente
+  align-items: center; // Centra verticalmente el ícono y el texto
+  margin-bottom: 15px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  mat-icon {
+    margin-right: 16px; // Espaciado adecuado entre ícono y texto
+    font-size: 24px; // Tamaño del ícono
+    color: map.get(map.get($palettes, primary), 'contrast');
+  }
+
+  span {
+    font-size: 16px;
+    color: map.get(map.get($palettes, primary), 'contrast');
+  }
+
+  &.active {
+    background-color: map.get(map.get($palettes, primary), 70); // Tono más oscuro para el estado activo
+    color: map.get(map.get($palettes, primary), 'contrast');
+  }
+
+  &:hover {
+    background-color: map.get(map.get($palettes, primary), 70); // Tono más oscuro al pasar el cursor
+  }
+}
+
+.navbar-custom {
+  background-color: map.get(map.get($palettes, primary), 50); // Fondo de la barra lateral
+  color: map.get(map.get($palettes, primary), 'contrast'); // Color de contraste para el texto
+}
+
+mat-icon.large-icon {
+  font-size: 115px; // Cambia el tamaño aquí
+  width: 115px; // Ajusta el ancho para mantener la proporción
+  height: 115px; // Ajusta la altura también si es necesario
+  display: block;
+  margin: 0 auto;
+}
+
+.menu-de-administracion {
+  margin-top: 200px;
+}
+
+.menu-de-administracion-container {
+  margin-top: 40px;
+}
+
+.list-item-container {
+  margin-top: 10px;
+}

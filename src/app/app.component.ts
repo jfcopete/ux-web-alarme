@@ -55,5 +55,5 @@ import { MatSelectModule } from '@angular/material/select';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'ux-web-alarme';
+  title = 'AlarMe';
 }
