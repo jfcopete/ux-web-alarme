@@ -56,5 +56,3 @@ Además de las rutas mencionadas, la aplicación cuenta con componentes adiciona
 Estos componentes se utilizan en diferentes partes de la aplicación para mejorar la navegación y la experiencia del usuario, pero no tienen rutas específicas asociadas a ellos.
 
 Cada ruta corresponde a un componente específico que maneja la lógica y la vista de esa sección de la aplicación.
-
-¡Disfruta desarrollando con UxWebAlarme!
