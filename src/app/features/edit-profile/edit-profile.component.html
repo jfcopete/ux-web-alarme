@@ -10,7 +10,7 @@
       <div class="content-columns">
         <!-- Columna Izquierda: Información Personal -->
         <mat-card class="perfil-card">
-          <h3>Información Personal</h3>
+          <h3 class="perfil-title">Información Personal</h3>
           <form [formGroup]="perfilForm" (ngSubmit)="guardarPerfil()">
             
             <!-- Envolvemos cada mat-form-field en un div -->
@@ -68,10 +68,9 @@
         <!-- Columna Derecha: Notificaciones y Reabastecimiento -->
         <div class="right-column">
           <mat-card class="preferencias-card">
-            <h3>Notificaciones</h3>
 
             <div class="notificaciones-section">
-              <h4>Notificaciones</h4>
+              <h4 class="notificaciones-title">Notificaciones</h4>
               <p>Aquí podrás encontrar tus notificaciones activas dentro de la app.</p>
 
               <mat-checkbox *ngFor="let notificacion of notificaciones" [(ngModel)]="notificacion.seleccionado">
@@ -90,10 +89,9 @@
           </mat-card>
 
           <mat-card class="preferencias-card">
-            <h3>Notificaciones de reabastecimiento</h3>
+            <h3 class="notificaciones-title">Notificaciones de reabastecimiento</h3>
 
             <div class="notificaciones-section">
-              <h4>Reabastecimiento de medicamentos</h4>
               <p>Configuración de notificaciones de reabastecimiento de medicamentos.</p>
 
               <mat-checkbox *ngFor="let item of reabastecimiento" [(ngModel)]="item.seleccionado">

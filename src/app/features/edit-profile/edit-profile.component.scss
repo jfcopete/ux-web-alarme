@@ -1,4 +1,4 @@
-
+/*edit-profile.component.scss*/
 @use 'sass:map';
 @use '@angular/material' as mat;
 @use '../../../m3-theme' as *;
@@ -24,6 +24,16 @@ h2 {
   font-weight: 600;
   margin-bottom: 20px;
 }
+.perfil-title {
+  color: map.get(map.get($palettes, primary), 40); // Color de los títulos
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.notificaciones-title {
+  color: map.get(map.get($palettes, primary), 40); // Color de los títulos
+  font-weight: 600;
+  margin-bottom: 20px;
+}
 
 /* Layout de dos columnas */
 .content-columns {
@@ -33,7 +43,7 @@ h2 {
 
 .perfil-card {
   flex: 1; // La columna izquierda ocupa el espacio que necesita
-  background-color: map.get(map.get($palettes, primary), 98); // Fondo de las tarjetas
+  background-color: map.get(map.get($palettes, primary), 50); // Fondo de las tarjetas
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16); // Sombra de las tarjetas
@@ -63,7 +73,7 @@ h2 {
 }
 
 .preferencias-card {
-  background-color: map.get(map.get($palettes, primary), 98); // Fondo de las tarjetas de preferencias
+  background-color: map.get(map.get($palettes, primary), 50); // Fondo de las tarjetas de preferencias
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
