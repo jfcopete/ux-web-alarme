@@ -19,7 +19,7 @@ Para obtener más ayuda sobre Angular CLI, usa `ng help` o visita la página [An
 
 1. **Clonar el repositorio**:
    ```bash
-   git clone [https://github.com/tu-usuario/UxWebAlarme.git](https://github.com/jfcopete/ux-web-alarme.git)
+   git clone https://github.com/jfcopete/ux-web-alarme.git
    cd ux-web-alarme
    ```
 
