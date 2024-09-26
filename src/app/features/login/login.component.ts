@@ -2,10 +2,11 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import {
   FormBuilder,
+  FormControl,
   FormGroup,
+  Validators,
   FormsModule,
   ReactiveFormsModule,
-  Validators,
 } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
@@ -29,18 +30,32 @@ import { MatInputModule } from '@angular/material/input';
     MatCardModule,
   ],
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss'], 
+  styleUrls: ['./login.component.scss'],
 })
+
 export class LoginComponent implements OnInit {
-  perfilForm!: FormGroup;
 
-  constructor(private fb: FormBuilder) {}
+  loginForm: FormGroup;
 
-  ngOnInit() {
-    this.perfilForm = this.fb.group({
-      email: ['', [Validators.required, Validators.email]],
-      contraseña: ['', [Validators.required, Validators.minLength(6)]],
+  constructor(private fb: FormBuilder) {
+    // Usando FormBuilder para crear el FormGroup
+    this.loginForm = this.fb.group({
+      email: new FormControl('', [Validators.required, Validators.email]),
+      password: new FormControl('', [Validators.required, Validators.minLength(6)]),
     });
   }
 
+  ngOnInit(): void {
+    console.log('LoginComponent initialized');
+  }
+
+  // Método que se ejecuta al enviar el formulario
+  onLogin() {
+    if (this.loginForm.valid) {
+      console.log(this.loginForm.value);
+      // Aquí puedes implementar la lógica de autenticación
+    } else {
+      console.log('Formulario no válido');
+    }
+  }
 }

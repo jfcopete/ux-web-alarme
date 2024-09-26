@@ -1,9 +1,13 @@
-<div class="login-container">
-  <div class="login-form">
-    
-    
-      <mat-card class="perfil-card">
+<div class="container">
+  <div class="column1"></div>
+  <div class="column2">
+    <img src="images/imagebackLogin.svg" class="imagebackLogin">
+  </div>
+</div>
 
+<div class="backgroundDiv">
+  <div class="formDiv">
+    <form [formGroup]="loginForm" (ngSubmit)="onLogin()"> 
         <h2 class="login-title">Ingresar</h2>
         
         <div class="form-field">
@@ -14,15 +18,14 @@
               placeholder="Correo electrónico"
               formControlName="email"
             />
-            <mat-error *ngIf="perfilForm.get('email')?.hasError('required')">
+            <!-- <mat-error *ngIf="loginForm.get('email')?.hasError('required')">
               El email es obligatorio
             </mat-error>
-            <mat-error *ngIf="perfilForm.get('email')?.hasError('email')">
+            <mat-error *ngIf="loginForm.get('email')?.hasError('email')">
               Ingresa un email válido
-            </mat-error>
+            </mat-error> -->
           </mat-form-field>
         </div>
-
         <div class="form-field">
           <mat-form-field appearance="outline" class="full-width">
             <mat-label>Contraseña</mat-label>
@@ -30,36 +33,33 @@
               matInput
               placeholder="Nueva contraseña"
               type="password"
-              formControlName="contraseña"
+              formControlName="password"
             />
-            <mat-error
-              *ngIf="perfilForm.get('contraseña')?.hasError('required')"
-            >
+            <!-- <mat-error *ngIf="loginForm.get('password')?.hasError('required')">
               La contraseña es obligatoria
             </mat-error>
-            <mat-error
-              *ngIf="perfilForm.get('contraseña')?.hasError('minlength')"
-            >
+            <mat-error *ngIf="loginForm.get('password')?.hasError('minlength')">
               La contraseña debe tener al menos 6 caracteres
-            </mat-error>
+            </mat-error> -->
           </mat-form-field>
         </div>
 
         <div class="social-login">
-          <p>O iniciar sesión con una red social</p>
-          <button mat-button class="social-button">Google</button>
-          <button mat-button class="social-button">Facebook</button>
+          <p class="textoPrimarycolor">O iniciar sesión con una red social</p>
+          <div class="social-icons">
+            <img src="images/Google.png" alt="Google login">
+            <img src="images/Facebook.png" alt="Facebook login">
+          </div>
         </div>
 
         <div class="forgot-password">
           <a href="#">¿Olvidaste tu contraseña?</a>
         </div>
 
-        <div class="forgot-password">
+        <div class="login-div-button">
           <button mat-button class="login-ingresar">Ingresar</button>
         </div>
 
-      </mat-card>
-
+      </form>
   </div>
 </div>
