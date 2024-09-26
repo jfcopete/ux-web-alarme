@@ -1,1 +1,30 @@
-<p>view-medication works!</p>
+<div class="container">
+  <!-- Sidebar -->
+  <app-nav-list></app-nav-list>
+
+  <div class="view-medication-container">
+    <h1 class="page-title">Medicamentos</h1>
+    
+    <div class="medication-cards">
+      <mat-card class="medication-card" *ngFor="let medication of medications">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>{{ medication.name }}</mat-card-title>
+          <mat-card-subtitle>{{ medication.subGroup }}</mat-card-subtitle>
+        </mat-card-header>
+
+        <!-- Aquí está la imagen dinámica -->
+        <img mat-card-image [src]="medication.image" alt="Imagen del medicamento">
+
+        <mat-card-content class="mat-card-image">
+          <p>{{ medication.description }}</p>
+        </mat-card-content>
+  
+        <mat-card-actions align="end">
+          <button mat-button color="warn">Eliminar</button>
+          <button mat-raised-button color="primary" (click)="viewMore(medication)">Ver más</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</div>  
