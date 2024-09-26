@@ -1,29 +1,33 @@
-<div class="detailed-medication-container">
-    <button mat-icon-button class="back-button" (click)="goBack()">
-      <mat-icon>arrow_back</mat-icon>
-    </button>
-    
-    <h1 class="page-title">Medicamento detalle</h1>
-  
-    <div class="medication-details">
-      <img src="assets/placeholder-image.png" alt="Medicamento Imagen" class="medication-image">
+<div class="container">
+  <!-- Sidebar -->
+  <app-nav-list></app-nav-list>
+
+  <div class="detailed-medication-container">
+      <button mat-icon-button class="back-button" (click)="goBack()">
+        <mat-icon>arrow_back</mat-icon>
+      </button>
       
-      <div class="medication-info">
-        <h2>Nombre medicamento 1</h2>
-        <p class="start-date">Empezado a tomar desde DD/MM/YY</p>
+      <h1 class="page-title">Medicamento detalle</h1>
+    
+      <div class="medication-details">
+        <img src="assets/placeholder-image.png" alt="Medicamento Imagen" class="medication-image">
         
-        <p class="medication-description">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </p>
-  
-        <p class="medication-description">
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-  
-        <button mat-raised-button color="primary" class="delete-button">
-          Eliminar -
-        </button>
+        <div class="medication-info">
+          <h2>Nombre medicamento 1</h2>
+          <p class="start-date">Empezado a tomar desde DD/MM/YY</p>
+          
+          <p class="medication-description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </p>
+    
+          <p class="medication-description">
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+    
+          <button mat-raised-button color="primary" class="delete-button">
+            Eliminar -
+          </button>
+        </div>
       </div>
     </div>
-  </div>
-  
+</div>  

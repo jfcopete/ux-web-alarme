@@ -1,3 +1,21 @@
+@use 'sass:map';
+@use '@angular/material' as mat;
+@use '../../../m3-theme' as *; // Ruta al archivo donde está tu paleta de colores
+
+/* Contenedor principal */
+.container {
+  display: flex;
+  height: 80vh; // Ocupa toda la altura del viewport
+  gap: 20px; // Espaciado entre la barra lateral y el contenido
+}
+
+/* Sidebar */
+app-nav-list {
+  flex: 0 0 250px; // Sidebar siempre ocupa 250px
+  background-color: map.get(map.get($palettes, primary), 50); // Color del nav
+  height: 100vh; // Asegura que la barra de navegación cubra toda la altura
+}
+
 .view-medication-container {
     text-align: center;
     padding: 20px;
