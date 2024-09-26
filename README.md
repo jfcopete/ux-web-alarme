@@ -42,7 +42,7 @@ La aplicación tiene las siguientes rutas disponibles:
 - `/`:Landing Page / Página principal.
 - `/create-alarm`: Página de  crear alarmas.
 - `/edit-profile`: Página de  editar perfil.
-- `/forgot-password`: Página de  recuperar contraseña.
+- `/login`: Página de  login.
 - `/view-detailed-medication`: Página de  ver detalles de la medicación.
 - `/view-medication`: Página de  ver medicación.
 
@@ -52,6 +52,13 @@ Además de las rutas mencionadas, la aplicación cuenta con componentes adiciona
 
 - **Nav List**: Un componente que muestra una lista de navegación personalizada.
 - **Footer**: Un componente que muestra el pie de página de la aplicación.
+
+## Configuración de azure-blue.css
+Por motivos Técnicos tuvimos problemas para la ejecución y modificación de la paleta, por ende, se agrega en la carpeta public/azure-blue.css, que permite el cambio de colores de paleta personalizado.
+Para configurarlo de manera correcta
+1. Copie el archivo public/azure-blue.css
+2. Una vez instaladas las dependencias, pegar el archivo en node_modules/@angular/material/prebuilt-themes y sustituir el actual
+3. Disfrutar del proyecto.
 
 Estos componentes se utilizan en diferentes partes de la aplicación para mejorar la navegación y la experiencia del usuario, pero no tienen rutas específicas asociadas a ellos.
 
