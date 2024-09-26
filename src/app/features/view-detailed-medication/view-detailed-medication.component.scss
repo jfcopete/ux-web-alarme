@@ -1,0 +1,55 @@
+.detailed-medication-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+  
+  .back-button {
+    margin-bottom: 20px;
+  }
+  
+  .page-title {
+    font-size: 24px;
+    color: #4A90E2;
+    margin-bottom: 20px;
+  }
+  
+  .medication-details {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  
+  .medication-image {
+    width: 150px;
+    height: 150px;
+    margin-right: 20px;
+    border-radius: 10px;
+  }
+  
+  .medication-info {
+    max-width: 600px;
+  }
+  
+  h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+  
+  .start-date {
+    font-size: 14px;
+    color: gray;
+    margin-bottom: 20px;
+  }
+  
+  .medication-description {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .delete-button {
+    background-color: #4A90E2;
+    color: white;
+  }
+  
