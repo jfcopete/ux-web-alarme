@@ -23,11 +23,6 @@ app-nav-list {
   min-width: 600px; // Asegúrate de que tenga al menos 600px para que las columnas puedan mostrarse
 }
 
-// .view-medication-container {
-//     text-align: center;
-//     padding: 20px;
-//   }
-  
   .page-title {
     font-size: 24px;
     margin-bottom: 20px;
@@ -36,8 +31,10 @@ app-nav-list {
   
   .medication-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 150px;
+    // padding: 10px;
+    // border: 10px;
   }
   
   .medication-card {
@@ -58,3 +55,10 @@ app-nav-list {
     color: #4A90E2;
   }
   
+  .mat-card-image {
+    max-width: 80%;  /* Asegura que la imagen no exceda el ancho del contenedor */
+    height: 100px;    /* Altura fija o ajustable */
+    object-fit: cover; /* Ajusta la imagen para cubrir sin estirarse ni distorsionarse */
+    object-position: center; /* Centra la imagen si está recortada */
+    border-radius: 8px;  /* Agrega bordes redondeados si lo deseas */
+  }

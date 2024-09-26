@@ -47,16 +47,19 @@ export class ViewMedicationComponent {
       name: 'Nombre del medicamento',
       subGroup: 'SubGrupo',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
+      image: 'https://colsubsidio.vteximg.com.br/arquivos/ids/164489-1200-1200/7702605101511.jpg?v=637244282167470000',
     },
     {
       name: 'Title',
       subGroup: 'Subtitle',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
+      image: 'https://colsubsidio.vteximg.com.br/arquivos/ids/160819-1200-1200/7702057072193.jpg?v=637111973170670000',
     },
     {
       name: 'Title 3',
       subGroup: 'Subtitle',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
+      image: 'https://colsubsidio.vteximg.com.br/arquivos/ids/159768-1200-1200/7707232095295.jpg?v=637109838819570000',
     },
     // Agrega más objetos de medicamentos aquí según sea necesario
   ];
