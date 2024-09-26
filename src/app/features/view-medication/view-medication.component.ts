@@ -53,6 +53,11 @@ export class ViewMedicationComponent {
       subGroup: 'Subtitle',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
     },
+    {
+      name: 'Title 3',
+      subGroup: 'Subtitle',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
+    },
     // Agrega más objetos de medicamentos aquí según sea necesario
   ];
 

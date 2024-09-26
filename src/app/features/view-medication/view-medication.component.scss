@@ -17,9 +17,16 @@ app-nav-list {
 }
 
 .view-medication-container {
-    text-align: center;
-    padding: 20px;
-  }
+  flex: 1; // Asegura que el contenedor principal tome todo el espacio restante
+  text-align: center;
+  padding: 20px;
+  min-width: 600px; // Asegúrate de que tenga al menos 600px para que las columnas puedan mostrarse
+}
+
+// .view-medication-container {
+//     text-align: center;
+//     padding: 20px;
+//   }
   
   .page-title {
     font-size: 24px;
