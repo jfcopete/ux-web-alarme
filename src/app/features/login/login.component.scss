@@ -22,8 +22,16 @@
   
   .login-form h2 {
     text-align: center;
-    color: #4a90e2;
+    color: #51798E;
     margin-bottom: 20px;
+  }
+
+  .login-title{
+    font-family: 'Roboto';
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 500;
+    
   }
   
   .login-input {
@@ -38,12 +46,14 @@
   
   .social-button {
     margin: 10px;
-    background-color: #4285f4;
+    background-color: #B7DFF4;
     color: white;
   }
   
-  .facebook {
-    background-color: #3b5998;
+  .login-ingresar {
+    margin: 10px;
+    background-color: #1f91ce;
+    color: white;
   }
   
   .forgot-password {
