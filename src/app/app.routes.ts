@@ -5,6 +5,7 @@ import { ForgotPasswordComponent } from './features/forgot-password/forgot-passw
 import { LandingComponent } from './features/landing/landing.component';
 import { ViewDetailedMedicationComponent } from './features/view-detailed-medication/view-detailed-medication.component';
 import { ViewMedicationComponent } from './features/view-medication/view-medication.component';
+import { LoginComponent } from './features/login/login.component';
 
 export const routes: Routes = [
     { path: '', component: LandingComponent },
@@ -13,4 +14,5 @@ export const routes: Routes = [
     { path: 'view-detailed-medication', component: ViewDetailedMedicationComponent },
     { path: 'view-medication', component: ViewMedicationComponent },
     { path: 'create-alarm', component: CreateAlarmComponent },
+    { path: 'login', component: LoginComponent },
 ];
