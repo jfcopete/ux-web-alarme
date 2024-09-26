@@ -1,0 +1,154 @@
+.imagebackLogin {
+  position: relative; 
+  width: 100%;
+  height: 100%;
+  align-content: right;
+}
+
+.container {
+  display: flex;
+}
+
+.column1 {
+  flex-basis: 40%;
+  background-color: white;
+}
+
+.column2 {
+  flex-basis: 60%;
+  background-color: #9FF0E4;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  padding: 20px;
+}
+
+/* El div de fondo que ocupará toda la pantalla */
+.backgroundDiv {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('/assets/login-background.png');
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+
+/* El div que contendrá el formulario */
+.formDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  // width: 30%;
+  // height: 60%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #B7DFF4;
+  padding: 60px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+/* Estilos adicionales del formulario */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f4f8;
+}
+
+.login-form {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+}
+
+.login-form h2 {
+  text-align: center;
+  color: #51798E;
+  margin-bottom: 20px;
+}
+
+.login-title {
+  text-align: center;
+  font-family: 'Roboto';
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 500;
+  color: #51798E;
+  padding: 30px;
+}
+
+.social-login {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.social-button {
+  margin: 20px;
+  background-color: #B7DFF4;
+  color: white;
+  font-size: 26px;
+}
+
+.login-ingresar {
+  margin: 10px;
+  background-color: #51798E !important; /* Forzar el color de fondo */
+  color: white !important; /* Forzar el color de la letra */
+  font-size: 16px;
+  border: none; /* Elimina cualquier borde por defecto */
+  padding: 25px;;
+}
+
+.login-div-button {
+  text-align: right;
+  justify-content: right;
+  margin-top: 20px;
+}
+
+.forgot-password {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.forgot-password a {
+  color: #4a90e2;
+  text-decoration: none;
+}
+
+.login-button {
+  width: 100%;
+  padding: 10px;
+}
+.textoPrimarycolor{
+  color: #51798E;
+  font-size: 18px;
+  font-family: 'Roboto';
+}
+
+.social-login {
+  text-align: center;
+  margin-top: 20px;
+
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 50px; /* Espacio entre las imágenes */
+    
+    img {
+      width: 60px; /* Ajusta el tamaño de las imágenes */
+      height: auto;
+      object-fit: contain;
+    }
+  }
+}
